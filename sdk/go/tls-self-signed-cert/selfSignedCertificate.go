@@ -103,7 +103,7 @@ type selfSignedCertificateArgs struct {
 	// When `algorithm` is `RSA`, the size of the generated RSA key, in bits (default: `2048`).
 	RsaBits *int `pulumi:"rsaBits"`
 	// The subject for which a certificate is being requested. The acceptable arguments are all optional and their naming is based upon [Issuer Distinguished Names (RFC5280)](https://tools.ietf.org/html/rfc5280#section-4.1.2.4) section.
-	Subject SelfSignedCertSubject `pulumi:"subject"`
+	Subject tls.SelfSignedCertSubject `pulumi:"subject"`
 	// Number of hours, after initial issuing, that the certificate will remain valid for.
 	ValidityPeriodHours int `pulumi:"validityPeriodHours"`
 }
@@ -125,7 +125,7 @@ type SelfSignedCertificateArgs struct {
 	// When `algorithm` is `RSA`, the size of the generated RSA key, in bits (default: `2048`).
 	RsaBits pulumi.IntPtrInput
 	// The subject for which a certificate is being requested. The acceptable arguments are all optional and their naming is based upon [Issuer Distinguished Names (RFC5280)](https://tools.ietf.org/html/rfc5280#section-4.1.2.4) section.
-	Subject SelfSignedCertSubjectInput
+	Subject tls.SelfSignedCertSubjectInput
 	// Number of hours, after initial issuing, that the certificate will remain valid for.
 	ValidityPeriodHours pulumi.IntInput
 }
